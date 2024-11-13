@@ -1,8 +1,6 @@
-'use client'
-
 import tw, { styled, css, theme } from 'twin.macro'
 
-export const Button = styled.button(({ $variant, $isSmall }) => [
+const Button = styled.button(({ $variant, $isSmall }) => [
   // The common button styles added with the tw import
   tw`px-8 py-2 rounded transform duration-75`,
 
@@ -10,12 +8,12 @@ export const Button = styled.button(({ $variant, $isSmall }) => [
   tw`hocus:(scale-105 text-yellow-400)`,
 
   // Use props to conditionally style your components
-  $variant === 'primary' && tw`bg-black text-white border-black`,
+  $variant === 'primary' && tw`bg-black text-white border-black bg-blue-700`,
 
   // Combine regular css with tailwind classes within backticks
   $variant === 'secondary' && [
     css`
-      box-shadow: 0 0.1em 0 0 rgba(0, 0, 0, 0.25);
+      box-shadow: 0 0.1em  rgba(255, 0, 0, 1);
     `,
     tw`border-2 border-yellow-600`,
   ],
@@ -25,6 +23,8 @@ export const Button = styled.button(({ $variant, $isSmall }) => [
 
   // The theme import can supply values from your tailwind.config.js
   css`
-    color: ${theme`colors.white`};
+    color: ${theme`colors.black`};
   `,
 ])
+
+export default Button

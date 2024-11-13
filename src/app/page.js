@@ -1,13 +1,17 @@
+'use client'; 
+
 import React from 'react'
-import { Container } from '../app/components/Container'
-import { Button } from '../app/components/button'
+import Button from './components/Button';
+
 
 const App = () => (
-  <Container $hasBackground>
+  <div>
     <Button $variant="primary">Submit</Button>
-    <Button $variant="secondary">Cancel</Button>
-    <Button $isSmall>Close</Button>
-  </Container>
+    <Button $variant="secondary">Submit</Button>
+    
+  </div>
+    
+  
 )
 
 export default App
