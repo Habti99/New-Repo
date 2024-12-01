@@ -13,6 +13,7 @@ module.exports = {
         foreground: "var(--foreground)",
         ribbon:"red",
       },
+      
     },
   },
   plugins: [],
